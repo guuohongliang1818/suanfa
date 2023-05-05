@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7052aef1-9ce5-4301-95fd-76e32454ff34" name="Changes" comment="修改readme文件">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ghl/BinarySearchTest.java" afterDir="false" />
+    <list default="true" id="7052aef1-9ce5-4301-95fd-76e32454ff34" name="Changes" comment="二分法编写和测试">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ghl/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ghl/BinarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683295418804</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="二分法编写和测试">
+      <created>1683297879394</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683297879394</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +180,7 @@
     <MESSAGE value="添加忽略文件" />
     <MESSAGE value="添加readme文件" />
     <MESSAGE value="修改readme文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改readme文件" />
+    <MESSAGE value="二分法编写和测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="二分法编写和测试" />
   </component>
 </project>
