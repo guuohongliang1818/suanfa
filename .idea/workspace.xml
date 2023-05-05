@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7052aef1-9ce5-4301-95fd-76e32454ff34" name="Changes" comment="添加忽略文件">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="7052aef1-9ce5-4301-95fd-76e32454ff34" name="Changes" comment="修改readme文件">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ghl/BinarySearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ghl/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ghl/BinarySearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +34,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="2PNFXDM7jPXIKSe1fdmoXIv9rLC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,6 +48,60 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RunManager" selected="JUnit.BinarySearchTest.test2">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.BinarySearch" />
+      <module name="suanfa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ghl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="suanfa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ghl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ghl" />
+      <option name="MAIN_CLASS_NAME" value="com.ghl.BinarySearchTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="suanfa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ghl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ghl" />
+      <option name="MAIN_CLASS_NAME" value="com.ghl.BinarySearchTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BinarySearchTest.test2" />
+        <item itemvalue="JUnit.BinarySearchTest.test1" />
+        <item itemvalue="Application.BinarySearch" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -81,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683293415373</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加readme文件">
+      <created>1683295210077</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683295210077</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修改readme文件">
+      <created>1683295418804</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683295418804</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,11 +167,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化算法项目" />
     <MESSAGE value="变量更新" />
     <MESSAGE value="添加忽略文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加忽略文件" />
+    <MESSAGE value="添加readme文件" />
+    <MESSAGE value="修改readme文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改readme文件" />
   </component>
 </project>
