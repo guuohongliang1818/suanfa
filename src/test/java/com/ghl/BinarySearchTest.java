@@ -24,7 +24,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    @DisplayName("binarySearchBasic未好到")
+    @DisplayName("binarySearchBasic未找到")
     public void test2(){
         int[] arr = {1, 3, 6, 8, 8, 12, 35, 36, 67};
         Assertions.assertEquals(-1,BinarySearch.binarySearchBasic(arr,2));
