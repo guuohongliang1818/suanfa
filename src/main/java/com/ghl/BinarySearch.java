@@ -1,5 +1,7 @@
 package com.ghl;
 
+import java.util.Arrays;
+
 public class BinarySearch {
 
 
@@ -16,9 +18,9 @@ public class BinarySearch {
         //循环，如果start>end则停止循环，返回-1
 
         /**
-        L次，元素在最左边 L次，只需要比较if，成本较低
-        L次，元素在最右边 2*L次，需要比较if和else if，成本较高
-        左边和右边查找元素不平衡，需要优化为左右查找元素平衡的算法
+         L次，元素在最左边 L次，只需要比较if，成本较低
+         L次，元素在最右边 2*L次，需要比较if和else if，成本较高
+         左边和右边查找元素不平衡，需要优化为左右查找元素平衡的算法
          */
 
         while (start <= end) {
@@ -92,11 +94,11 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        /**
-         int[] arr = {1, 3, 6, 8, 9, 12, 35, 36, 67};
-         int index = binarySearchBasic(arr, 8);
-         System.out.println(index);
-         */
+
+        int[] arr = {1, 3, 6, 8, 9, 12, 35, 36, 67};
+        int index = binarySearchBasic(arr, 8);
+        System.out.println(index);
+
         int start = 0;
         int end = Integer.MAX_VALUE;
         System.out.println("end:" + end);
@@ -119,5 +121,7 @@ public class BinarySearch {
          * 不把最高位视为符号位的结果是：3221225470
          * 把最高位视为符号位的结果是：-1073741826
          */
+        int ind = Arrays.binarySearch(arr,7);
+        System.out.println(ind);
     }
 }
