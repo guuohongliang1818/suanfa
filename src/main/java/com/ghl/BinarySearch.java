@@ -14,6 +14,13 @@ public class BinarySearch {
         int start = 0;
         int end = arr.length - 1;
         //循环，如果start>end则停止循环，返回-1
+
+        /**
+        L次，元素在最左边 L次，只需要比较if，成本较低
+        L次，元素在最右边 2*L次，需要比较if和else if，成本较高
+        左边和右边查找元素不平衡，需要优化为左右查找元素平衡的算法
+         */
+
         while (start <= end) {
             //取二者的中间值下标，所对应的值
             int mid = (start + end) >>> 1;//向下取整,无符号按位右移可以避免出现负数，而且试用更多的语言，比如javaScript
