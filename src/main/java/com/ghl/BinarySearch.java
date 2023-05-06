@@ -6,7 +6,7 @@ public class BinarySearch {
     public static void main(String[] args) {
 
         int[] arr = {1, 3, 6, 8, 9, 12, 35, 36, 67};
-        int index = binarySearchBasic(arr,8);
+        int index = binarySearchBasic(arr, 8);
         System.out.println(index);
 
     }
@@ -36,4 +36,13 @@ public class BinarySearch {
         }
         return -1;
     }
+    /**
+     * 问题1：为什么是start<=end，意味着区间内有未比较的元素，而不是start<end?
+     * start==end 意味着start，end它们指向的元素也会参与比较
+     * start<end 只意味着mid指向的元素参与比较
+     */
+
+    /**
+     * 问题2：（start+end）/2 有没有问题？
+     */
 }
