@@ -124,7 +124,7 @@ public class BinarySearch {
     }
 
     /**
-     * 重复的元素返回最左元素的下标
+     * 重复的元素返回最右元素的下标
      *
      * @param arr
      * @param target
