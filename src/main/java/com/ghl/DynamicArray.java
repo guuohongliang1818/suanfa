@@ -13,7 +13,7 @@ public class DynamicArray implements Iterable<Integer> {
 
     private int size = 0;//逻辑大小
     private int capacity = 8;//容量
-    private int[] arr = new int[capacity];
+    private int[] arr = {};
 
     /**
      * 向数组的末尾添加元素
@@ -33,12 +33,27 @@ public class DynamicArray implements Iterable<Integer> {
      * @param element
      */
     public void add(int index, int element) {
+        /**
+         * 扩容操作：
+         */
+        checkAndGrow();
 
         if (index >= 0 && index < size) {//如果index=size，则相当于在arr的末尾插入元素
             System.arraycopy(arr, index, arr, index + 1, size - index);
         }
         arr[index] = element;
         size++;
+    }
+
+    private void checkAndGrow() {
+        if (size == 0) {
+            arr = new int[capacity];
+        } else if (size == capacity) {//表明数组需要扩容，java中时扩容1.5倍
+            capacity = capacity + (capacity >> 1);
+            int[] new_arr = new int[capacity];
+            System.arraycopy(arr, 0, new_arr, 0, size);
+            arr = new_arr;
+        }
     }
 
     public int get(int index) {
@@ -91,7 +106,9 @@ public class DynamicArray implements Iterable<Integer> {
          * 删除下标为3的元素
          */
         int element = arr[index];
-        System.arraycopy(arr, index + 1, arr, index, size - (index + 1));
+        if (index < size - 1) {//index=size-1时，不需要移动元素
+            System.arraycopy(arr, index + 1, arr, index, size - (index + 1));
+        }
         //arr[size - 1] = 0;
         size--;
         return element;
