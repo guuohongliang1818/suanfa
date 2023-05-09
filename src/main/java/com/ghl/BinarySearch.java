@@ -95,6 +95,27 @@ public class BinarySearch {
     }
 
     /**
+     * 二分查找平衡版
+     *
+     * @param arr
+     * @param target
+     * @return
+     */
+    public static int binarySearchBasicBalance(int[] arr, int target) {
+        int start = 0;
+        int end = arr.length;
+        while (start + 1 < end) {//改2
+            int mid = (start + end) >>> 1;//向下取整,无符号按位右移可以避免出现负数，而且试用更多的语言，比如javaScript
+            if (target < arr[mid]) {//target在midVal的左边
+                end = mid;//此时不参与比较
+            } else {//target在midVal的右边，或中间值为mid
+                start = mid;
+            }
+        }
+        return (arr[start] == target) ? start : -1;
+    }
+
+    /**
      * 重复的元素返回最左元素的下标
      *
      * @param arr
@@ -124,6 +145,31 @@ public class BinarySearch {
     }
 
     /**
+     * 重复的元素返回最左元素的下标
+     *
+     * @param arr
+     * @param target
+     * @return
+     */
+    public static int binarySearchLeftMost2(int[] arr, int target) {
+        /**
+         * [1, 3, 6, 7, 7, 7, 9, 12, 35, 36, 67]
+         */
+        int start = 0;
+        int end = arr.length - 1;
+        while (start <= end) {
+            int mid = (start + end) >>> 1;
+            if (arr[mid] >= target) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        //返回的值：>=目标值得最靠左的位置
+        return start;//找到：与目标相等的最靠左的索引位置。找不到：比目标大的并且是最靠左的索引位置
+    }
+
+    /**
      * 重复的元素返回最右元素的下标
      *
      * @param arr
@@ -150,6 +196,31 @@ public class BinarySearch {
             }
         }
         return candidate;
+    }
+
+    /**
+     * 重复的元素返回最右元素的下标
+     *
+     * @param arr
+     * @param target
+     * @return
+     */
+    public static int binarySearchRightMost2(int[] arr, int target) {
+        /**
+         * [1, 3, 6, 7, 7, 7, 9, 12, 35, 36, 67]
+         */
+        int start = 0;
+        int end = arr.length - 1;
+        //候选位置
+        while (start <= end) {
+            int mid = (start + end) >>> 1;
+            if (arr[mid] > target) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+        return start - 1;
     }
 
     public static void main(String[] args) {
