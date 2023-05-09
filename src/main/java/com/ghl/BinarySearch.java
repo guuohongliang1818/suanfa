@@ -276,6 +276,13 @@ public class BinarySearch {
             System.out.println(Arrays.toString(new_array));
 
         }
+        int[] array = new int[]{12,3};
+        int[] array1 = new int[2];
 
+        //测试
+    }
+
+    public static int[] test() {
+        return new int[]{1,2};
     }
 }
