@@ -217,10 +217,11 @@ public class SingleLinkedListSentinel implements Iterable<Integer>{
     }
 
     public void removeFirst() {
-        if (head == null) {
-            throw new IllegalArgumentException(String.format("index [%d] 不合法%n", 0));
-        }
-        head = head.next;
+//        if (head == null) {
+//            throw new IllegalArgumentException(String.format("index [%d] 不合法%n", 0));
+//        }
+//        head = head.next;
+        removeIndex(0);
     }
 
     /**
