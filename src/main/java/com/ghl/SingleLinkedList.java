@@ -150,7 +150,15 @@ public class SingleLinkedList implements Iterable<Integer> {//整体
         }
     }
 
-    public int get(int index) {
+    /**
+     * 根据索引查找
+     *
+     * @param index 索引
+     * @return 返回该索引位置节点的值
+     * @throws IllegalArgumentException 找不到抛出index非法异常
+     */
+
+    public int get(int index) throws IllegalArgumentException {
         Node node = findNode(index);
         if (node == null) {
             throw new IllegalArgumentException(String.format("index [%d] 不合法%n", index));
@@ -167,6 +175,60 @@ public class SingleLinkedList implements Iterable<Integer> {//整体
             }
         }
         return null;//没有找到
+    }
+
+    /**
+     * 向索引位置插入节点
+     *
+     * @param index 要插入的索引位置
+     * @param value 要插入的值
+     *              0   1   2   3   4
+     *              1-> 2-> 3-> 4-> 5-> null
+     *              注意；需要找到要插入的索引位置-1
+     */
+    public void insert(int index, int value) {
+        if (index == 0) {
+            head = new Node(value, head);
+            return;
+        }
+        //1.找到(索引)和(索引-1）位置的node节点
+        Node prev = findNode(index - 1);
+        if (prev == null) {
+            throw new IllegalArgumentException(String.format("未找到元素，index [%d] 不合法%n", index));
+        }
+        //创建新节点
+        prev.next = new Node(value, prev.next);
+
+    }
+
+    public void removeFirst() {
+        if (head == null) {
+            throw new IllegalArgumentException(String.format("index [%d] 不合法%n", 0));
+        }
+        head = head.next;
+    }
+
+    /**
+     * 链表按索引删除
+     */
+    public void removeIndex(int index) {
+        if (index == 0) {
+            removeFirst();
+            return;
+        }
+        //1.找到当前下标的前一个元素，即index-1
+        Node prev = findNode(index - 1);
+        if (prev == null) {
+            throw new IllegalArgumentException(String.format("index [%d] 不合法，前面的元素为null%n", index));
+        }
+        //2.被删除的节点
+        Node removed = prev.next;
+        if (removed == null) {
+            throw new IllegalArgumentException(String.format("index [%d] 不合法，删除节点为null%n", index));
+        }
+        //Node next = prev.next.next;
+        //3.调整next的值
+        prev.next = removed.next;
     }
 }
 

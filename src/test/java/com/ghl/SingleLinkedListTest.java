@@ -60,4 +60,46 @@ public class SingleLinkedListTest {
         int i = list.get(2);
         System.out.println(i);
     }
+
+    @Test
+    public void test6() {
+        SingleLinkedList list = new SingleLinkedList();
+        list.addLast(13);
+        list.addLast(14);
+        list.addLast(15);
+        list.addLast(16);
+
+        //list.insert(0,100);
+        //list.loop1(System.out::println);
+
+        list.insert(4,120);
+        list.loop1(System.out::println);
+    }
+    @Test
+    public void test7() {
+        SingleLinkedList list = new SingleLinkedList();
+        list.addLast(13);
+        list.addLast(14);
+        list.addLast(15);
+        list.addLast(16);
+
+        //list.insert(0,100);
+        //list.loop1(System.out::println);
+
+        list.removeFirst();
+        list.loop1(System.out::println);
+    }
+
+    @Test
+    public void test8() {
+        SingleLinkedList list = new SingleLinkedList();
+        list.addLast(13);//0
+        list.addLast(14);//1
+        list.addLast(15);//2
+        list.addLast(16);//3
+
+
+        list.removeIndex(5);
+
+    }
 }
