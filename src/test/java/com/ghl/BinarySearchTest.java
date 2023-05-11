@@ -1,6 +1,7 @@
 package com.ghl;
 
 
+import com.ghl.algorithm.binarysearch.BinarySearch;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,7 +14,7 @@ public class BinarySearchTest {
     @DisplayName("binarySearchBasic找到")
     public void test1(){
         int[] arr = {1, 3, 6, 8, 9, 12, 35, 36, 67};
-        Assertions.assertEquals(0,BinarySearch.binarySearchBasic(arr,1));
+        Assertions.assertEquals(0, BinarySearch.binarySearchBasic(arr,1));
         Assertions.assertEquals(1,BinarySearch.binarySearchBasic(arr,3));
         Assertions.assertEquals(2,BinarySearch.binarySearchBasic(arr,6));
         Assertions.assertEquals(3,BinarySearch.binarySearchBasic(arr,8));

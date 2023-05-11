@@ -1,4 +1,4 @@
-package com.ghl;
+package com.ghl.algorithm.binarysearch;
 
 import java.util.ArrayList;
 import java.util.Arrays;

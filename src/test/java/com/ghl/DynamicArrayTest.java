@@ -1,12 +1,10 @@
 package com.ghl;
 
+import com.ghl.datastructure.DynamicArray;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.sql.ClientInfoStatus;
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
 
 public class DynamicArrayTest {
 

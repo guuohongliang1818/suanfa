@@ -1,4 +1,4 @@
-package com.ghl;
+package com.ghl.datastructure;
 
 import java.util.Iterator;
 

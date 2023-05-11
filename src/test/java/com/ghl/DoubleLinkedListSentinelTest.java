@@ -1,5 +1,6 @@
 package com.ghl;
 
+import com.ghl.datastructure.DoubleLinkedListSentinel;
 import org.junit.jupiter.api.Test;
 
 public class DoubleLinkedListSentinelTest {

@@ -1,4 +1,4 @@
-package com.ghl;
+package com.ghl.datastructure;
 
 public class TwoDimensionArray {
 
