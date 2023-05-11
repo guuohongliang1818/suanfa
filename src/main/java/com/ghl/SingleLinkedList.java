@@ -79,6 +79,19 @@ public class SingleLinkedList implements Iterable<Integer> {//整体
         }
     }
 
+    public void loop3(Consumer<Integer> beforeConsumer, Consumer<Integer> afterConsumer) {
+        recursion(head, beforeConsumer, afterConsumer);
+    }
+
+    private void recursion(Node curr, Consumer<Integer> beforeConsumer, Consumer<Integer> afterConsumer) {//针对某个节点要进行的操作
+        if (curr == null) {
+            return;
+        }
+        beforeConsumer.accept(curr.value);
+        recursion(curr.next, beforeConsumer, afterConsumer);
+        afterConsumer.accept(curr.value);
+    }
+
     /**
      * 遍历方法3，增强for循环
      *

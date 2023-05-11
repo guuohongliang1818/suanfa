@@ -34,9 +34,8 @@ public class SingleLinkedListTest {
         list.addFirst(10);
         list.addFirst(11);
         list.addFirst(12);
-        for (Integer ele : list) {
-            System.out.println(ele);
-        }
+        list.loop3(t -> System.out.println("前" + t), t -> System.out.println("后" + t));
+        list.loop3(System.out::println,System.out::println);
     }
 
     @Test
@@ -72,9 +71,10 @@ public class SingleLinkedListTest {
         //list.insert(0,100);
         //list.loop1(System.out::println);
 
-        list.insert(4,120);
+        list.insert(4, 120);
         list.loop1(System.out::println);
     }
+
     @Test
     public void test7() {
         SingleLinkedList list = new SingleLinkedList();
