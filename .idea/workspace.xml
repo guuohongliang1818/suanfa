@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c389bcf-b04b-4bea-b1c6-8d94243f0b37" name="Changes" comment="二分法编写和测试">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/DoubleCircleLinkedListSentinel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ghl/DoubleCircleLinkedListSentinelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/算法与数据结构.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/算法与数据结构.xmind" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ghl/algorithm/recursion/E03BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ghl/algorithm/recursion/E03BinarySearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +30,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$PROJECT_DIR$/../../softwareinstall/jdk1.8/jdk1.8.0_31/src.zip!/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$PROJECT_DIR$/../../softwareinstall/jdk1.8/jdk1.8.0_31/src.zip!/java/util/stream/IntStream.java" root0="SKIP_INSPECTION" />
-    <setting file="jar://$PROJECT_DIR$/../../softwareinstall/jdk1.8/jdk1.8.0_31/src.zip!/java/util/Arrays.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -62,19 +55,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
-  <component name="RunManager" selected="JUnit.DoubleCircleLinkedListSentinelTest.test5">
-    <configuration name="DoubleCircleLinkedListSentinelTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.E03BinarySearch">
+    <configuration name="E03BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E03BinarySearch" />
       <module name="suanfa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ghl.*" />
+          <option name="PATTERN" value="com.ghl.algorithm.recursion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ghl" />
-      <option name="MAIN_CLASS_NAME" value="com.ghl.DoubleCircleLinkedListSentinelTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,18 +135,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.E03BinarySearch" />
         <item itemvalue="JUnit.DoubleCircleLinkedListSentinelTest.test5" />
         <item itemvalue="JUnit.DoubleCircleLinkedListSentinelTest.test4" />
         <item itemvalue="JUnit.DoubleCircleLinkedListSentinelTest.test3" />
         <item itemvalue="JUnit.DoubleCircleLinkedListSentinelTest.test2" />
-        <item itemvalue="JUnit.DoubleCircleLinkedListSentinelTest.test1" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7052aef1-9ce5-4301-95fd-76e32454ff34" name="Changes" comment="" />
+      <changelist id="5c389bcf-b04b-4bea-b1c6-8d94243f0b37" name="Changes" comment="二分法编写和测试" />
       <created>1683289671396</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

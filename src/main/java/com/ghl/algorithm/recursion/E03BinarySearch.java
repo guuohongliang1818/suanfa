@@ -24,6 +24,10 @@ public class E03BinarySearch {
         return -1;
     }
 
+    public static int search_re(int[] arr, int target) {
+        return f(arr, 0, arr.length - 1, target);
+    }
+
     private static int f(int[] arr, int i, int j, int target) {
         if (i > j) {
             return -1;
@@ -62,11 +66,11 @@ public class E03BinarySearch {
     public static void main(String[] args) {
         int[] arr = {1, 3, 4, 5, 8, 10, 11, 13};
         //System.out.println(search(arr, 4));
-        System.out.println(f(arr, 0, arr.length - 1, -1));
+        System.out.println(search_re(arr, -1));
 
 
         int[] arr1 = {1, 3, 4, 5, 5, 8, 10, 10, 10, 11, 13};
         //System.out.println(search(arr, 4));
-        System.out.println(f(arr1, 0, arr.length - 1, 5));
+        System.out.println(search_re(arr1, 5));
     }
 }
