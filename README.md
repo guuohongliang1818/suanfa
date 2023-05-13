@@ -3,7 +3,7 @@ git config --global user.email "guohongliang@163.com"
 git config --global --list
 ssh-keygen -t rsa -C "guohongliang@163.com"
 
-
+git账号密码：807834167@qq.com ghl627129
 #添加远程项目地址
 git@github.com:guuohongliang1818/suanfa.git
 https://github.com/guuohongliang1818/suanfa.git
