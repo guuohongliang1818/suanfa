@@ -76,7 +76,7 @@ public class E04BubbleSort {
 
     public static void main(String[] args) {
         //bubbleSort();
-        int[] arr = {8, 3, 6, 10, 9, 4, 7, 13, 5, 9};
+        int[] arr = {8, 4};
         f(arr, arr.length - 1);
         Arrays.stream(arr).forEach(System.out::println);
 
