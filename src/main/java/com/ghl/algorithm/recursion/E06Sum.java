@@ -12,11 +12,18 @@ public class E06Sum {
      *
      * @return
      */
-
-    public static int f(int n) {
+    /**
+     * 爆栈问题：栈内存溢出
+     * StackOverflowError
+     */
+    public static long f(long n) {
         if (n == 1) {
             return 1;
         }
         return n + f(n - 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(f(15000));
     }
 }
