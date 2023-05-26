@@ -7,6 +7,16 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="base-public" />
+      <option name="name" value="only public" />
+      <option name="url" value="http://10.168.16.130/repository/oiltax-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="3rd_part" />
+      <option name="name" value="3rd_part" />
+      <option name="url" value="http://10.168.16.130/repository/3rd_part/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Maven Central repository" />
       <option name="url" value="https://repo1.maven.org/maven2" />
@@ -15,6 +25,16 @@
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="base-snapshots" />
+      <option name="name" value="only snapshots" />
+      <option name="url" value="http://10.168.16.130/repository/oiltax-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repository.jnpfsoft.com/repository/maven-public/" />
     </remote-repository>
   </component>
 </project>

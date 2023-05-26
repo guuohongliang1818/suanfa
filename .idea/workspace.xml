@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c389bcf-b04b-4bea-b1c6-8d94243f0b37" name="Changes" comment="二分法编写和测试">
+    <list default="true" id="5c389bcf-b04b-4bea-b1c6-8d94243f0b37" name="Changes" comment="发送邮件功能">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/Pop3Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/RandomUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/SmtpUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ghl/algorithm/recursion/E03BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ghl/algorithm/recursion/E03BinarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/EmailSenderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/EmailSenderUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ghl/BinarySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ghl/BinarySearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ghl/BinarySearchTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,17 +41,18 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../softwareinstall/jdk1.8/jdk1.8.0_31/src.zip!/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../softwareinstall/jdk1.8/jdk1.8.0_31/src.zip!/java/util/stream/IntStream.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../softwareinstall/jdk1.8/jdk1.8.0_31/src.zip!/java/util/Arrays.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\softwareInstall\maven\repository" />
         <option name="mavenHome" value="$PROJECT_DIR$/../../softwareInstall/maven/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="D:\softwareInstall\maven\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="userSettingsFile" value="E:\softwareinstall\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="2PNFXDM7jPXIKSe1fdmoXIv9rLC" />
   <component name="ProjectViewState">
@@ -53,11 +64,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager" selected="Application.E03BinarySearch">
-    <configuration name="E03BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E03BinarySearch" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ideaproject\suanfa\src\main\java\com\ghl\EmailSender" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ghl.EmailSender" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.EmailSenderUtil">
+    <configuration name="E04BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E04BubbleSort" />
       <module name="suanfa" />
       <extension name="coverage">
         <pattern>
@@ -69,77 +90,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoubleCircleLinkedListSentinelTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="E05InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E05InsertionSort" />
       <module name="suanfa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ghl.*" />
+          <option name="PATTERN" value="com.ghl.algorithm.recursion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ghl" />
-      <option name="MAIN_CLASS_NAME" value="com.ghl.DoubleCircleLinkedListSentinelTest" />
-      <option name="METHOD_NAME" value="test2" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoubleCircleLinkedListSentinelTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="E06Fibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E06Fibonacci" />
       <module name="suanfa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ghl.*" />
+          <option name="PATTERN" value="com.ghl.algorithm.recursion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ghl" />
-      <option name="MAIN_CLASS_NAME" value="com.ghl.DoubleCircleLinkedListSentinelTest" />
-      <option name="METHOD_NAME" value="test3" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoubleCircleLinkedListSentinelTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="E06Sum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E06Sum" />
       <module name="suanfa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ghl.*" />
+          <option name="PATTERN" value="com.ghl.algorithm.recursion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ghl" />
-      <option name="MAIN_CLASS_NAME" value="com.ghl.DoubleCircleLinkedListSentinelTest" />
-      <option name="METHOD_NAME" value="test4" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoubleCircleLinkedListSentinelTest.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmailSenderUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.EmailSender.EmailSenderUtil" />
       <module name="suanfa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ghl.*" />
+          <option name="PATTERN" value="com.ghl.EmailSender.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ghl" />
-      <option name="MAIN_CLASS_NAME" value="com.ghl.DoubleCircleLinkedListSentinelTest" />
-      <option name="METHOD_NAME" value="test5" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.E03BinarySearch" />
-        <item itemvalue="JUnit.DoubleCircleLinkedListSentinelTest.test5" />
-        <item itemvalue="JUnit.DoubleCircleLinkedListSentinelTest.test4" />
-        <item itemvalue="JUnit.DoubleCircleLinkedListSentinelTest.test3" />
-        <item itemvalue="JUnit.DoubleCircleLinkedListSentinelTest.test2" />
+        <item itemvalue="Application.EmailSenderUtil" />
+        <item itemvalue="Application.E06Sum" />
+        <item itemvalue="Application.E06Fibonacci" />
+        <item itemvalue="Application.E05InsertionSort" />
+        <item itemvalue="Application.E04BubbleSort" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +210,56 @@
       <option name="project" value="LOCAL" />
       <updated>1683297879394</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="递归冒泡排序">
+      <created>1684742342903</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684742342903</updated>
+    </task>
+    <task id="LOCAL-00009" summary="冒泡排序边界值测试">
+      <created>1684745581662</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684745581662</updated>
+    </task>
+    <task id="LOCAL-00010" summary="插入排序">
+      <created>1684745603267</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684745603267</updated>
+    </task>
+    <task id="LOCAL-00011" summary="插入排序2">
+      <created>1684819217444</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684819217444</updated>
+    </task>
+    <task id="LOCAL-00012" summary="斐波那契数列，兔子问题，青蛙台阶等问题，以及采用记忆法优化">
+      <created>1684824509793</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684824509793</updated>
+    </task>
+    <task id="LOCAL-00013" summary="递归求和">
+      <created>1684832832270</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684832832270</updated>
+    </task>
+    <task id="LOCAL-00014" summary="发送邮件功能">
+      <created>1685012861219</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685012861219</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +281,14 @@
     <MESSAGE value="添加readme文件" />
     <MESSAGE value="修改readme文件" />
     <MESSAGE value="二分法编写和测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="二分法编写和测试" />
+    <MESSAGE value="递归冒泡排序" />
+    <MESSAGE value="冒泡排序边界值测试" />
+    <MESSAGE value="插入排序" />
+    <MESSAGE value="插入排序2" />
+    <MESSAGE value="斐波那契数列，兔子问题，青蛙台阶等问题，以及采用记忆法优化" />
+    <MESSAGE value="递归求和" />
+    <MESSAGE value="发送邮件功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="发送邮件功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -237,6 +302,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/ghl/DoubleCircleLinkedListSentinelTest.java</url>
           <line>83</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ghl/algorithm/recursion/E05InsertionSort.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
