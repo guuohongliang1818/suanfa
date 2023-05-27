@@ -35,12 +35,13 @@ public class MailConfig {
 //            passWord = properties.getProperty("mailPassword");
 //            emailForm = properties.getProperty("mailFrom");
 //            timeout = properties.getProperty("mailTimeout");
-            personal = "墨裔";
-            host = "";
-            port = "";
+//            personal = "墨裔";
+            host = "smtp.qq.com";
             userName = "807834167@qq.com";
-            passWord = "";
-            emailForm = "";
+            passWord = "ibdvdgdutousbahj";
+            port = 465;
+            emailForm = "807834167@qq.com";
+            timeout = "";
         } catch(Exception e){
             e.printStackTrace();
         }

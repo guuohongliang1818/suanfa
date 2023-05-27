@@ -4,6 +4,7 @@ import com.sun.xml.internal.messaging.saaj.packaging.mime.MessagingException;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
+
 import javax.mail.internet.MimeMessage;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -32,8 +33,8 @@ public class MailUtil {
         sender.setPassword(PASSWORD);
         sender.setDefaultEncoding("Utf-8");
         Properties p = new Properties();
-        p.setProperty("mail.smtp.timeout", timeout);
-        p.setProperty("mail.smtp.auth", "false");
+//        p.setProperty("mail.smtp.timeout", timeout);
+        p.setProperty("mail.smtp.auth", "true");
         p.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
         sender.setJavaMailProperties(p);
         return sender;
@@ -52,7 +53,7 @@ public class MailUtil {
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         // 设置utf-8或GBK编码，否则邮件会有乱码
         MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
-        messageHelper.setFrom(emailForm, personal);
+        messageHelper.setFrom(emailForm, "五洲运通集团");
         messageHelper.setTo(to);
         messageHelper.setSubject(subject);
         messageHelper.setText(html, true);
@@ -62,10 +63,10 @@ public class MailUtil {
     /**
      * 发送带附件的邮件
      *
-     * @param to      接受人
-     * @param subject 主题
-     * @param html    发送内容
-     * @param filePath  附件路径
+     * @param to       接受人
+     * @param subject  主题
+     * @param html     发送内容
+     * @param filePath 附件路径
      * @throws MessagingException           异常
      * @throws UnsupportedEncodingException 异常
      */
@@ -77,9 +78,9 @@ public class MailUtil {
         messageHelper.setTo(to);
         messageHelper.setSubject(subject);
         messageHelper.setText(html, true);
-        FileSystemResource file=new FileSystemResource(new File(filePath));
-        String fileName=filePath.substring(filePath.lastIndexOf(File.separator));
-        messageHelper.addAttachment(fileName,file);
+        FileSystemResource file = new FileSystemResource(new File(filePath));
+        String fileName = filePath.substring(filePath.lastIndexOf(File.separator));
+        messageHelper.addAttachment(fileName, file);
         mailSender.send(mimeMessage);
     }
 }
