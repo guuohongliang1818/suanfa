@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c389bcf-b04b-4bea-b1c6-8d94243f0b37" name="Changes" comment="发送邮件功能">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/Pop3Util.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/RandomUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/SmtpUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="5c389bcf-b04b-4bea-b1c6-8d94243f0b37" name="Changes" comment="删除发送邮件功能">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/EmailSenderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/EmailSenderUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ghl/BinarySearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ghl/BinarySearchTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ghl/BinarySearchTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +48,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="2PNFXDM7jPXIKSe1fdmoXIv9rLC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -76,20 +73,7 @@
       <recent name="com.ghl.EmailSender" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.EmailSenderUtil">
-    <configuration name="E04BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E04BubbleSort" />
-      <module name="suanfa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ghl.algorithm.recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MailController">
     <configuration name="E05InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E05InsertionSort" />
       <module name="suanfa" />
@@ -142,13 +126,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MailController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.EmailSender.MailController" />
+      <module name="suanfa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ghl.EmailSender.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MailController" />
         <item itemvalue="Application.EmailSenderUtil" />
         <item itemvalue="Application.E06Sum" />
         <item itemvalue="Application.E06Fibonacci" />
         <item itemvalue="Application.E05InsertionSort" />
-        <item itemvalue="Application.E04BubbleSort" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685012861219</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="删除发送邮件功能">
+      <created>1685082633645</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685082633645</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,7 +292,8 @@
     <MESSAGE value="斐波那契数列，兔子问题，青蛙台阶等问题，以及采用记忆法优化" />
     <MESSAGE value="递归求和" />
     <MESSAGE value="发送邮件功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="发送邮件功能" />
+    <MESSAGE value="删除发送邮件功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除发送邮件功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -14,3 +14,6 @@ git remote add origin 仓库地址
 git remote set-url origin 新的仓库地址
 git remote -v 查看远程仓库地址
 
+
+807834167@qq.com 的邮箱密码：GO35@k0a
+

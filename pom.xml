@@ -21,11 +21,11 @@
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>javax.mail</groupId>-->
-<!--            <artifactId>mail</artifactId>-->
-<!--            <version>1.4.1</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.1</version>
+        </dependency>
 <!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.sun.mail/javax.mail &ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>com.sun.mail</groupId>-->
