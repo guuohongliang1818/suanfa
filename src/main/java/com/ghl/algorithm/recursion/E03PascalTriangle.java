@@ -32,7 +32,7 @@ public class E03PascalTriangle {
         for (int i = 0; i < n; i++) {
             printBlank(n, i);
             for (int j = 0; j <= i; j++) {
-                System.out.printf("%-6d", pascalTriangle(i, j));
+                System.out.printf("%-12d", pascalTriangle(i, j));
             }
             System.out.println();
         }
@@ -40,7 +40,7 @@ public class E03PascalTriangle {
 
     private static void printBlank(int n, int i) {
 
-        int num = (n - 1 - i) * 3;
+        int num = (n - 1 - i) * 6;
         for (int b = 0; b < num; b++) {
             System.out.print(" ");
         }
