@@ -38,6 +38,7 @@ public class E03PascalTriangle {
         }
     }
 
+
     private static void printBlank(int n, int i) {
 
         int num = (n - 1 - i) * 6;
@@ -47,9 +48,40 @@ public class E03PascalTriangle {
 
     }
 
+    /**
+     * 代码优化，使用记忆法，使用二维数组进行优化
+     *
+     * @param i
+     * @param j
+     * @return
+     */
+    private static int pascalTriangle1(int[][] triangle, int i, int j) {
+        if (triangle[i][j] != 0) {
+            return triangle[i][j];
+        }
+        if (j == 0 || i == j) {
+            triangle[i][j] = 1;
+            return 1;
+        }
+        triangle[i][j] = pascalTriangle1(triangle, i - 1, j - 1) + pascalTriangle1(triangle, i - 1, j);
+        return triangle[i][j];
+    }
+
+    private static void print1(int n) {
+        int[][] triangle = new int[n][];
+        for (int i = 0; i < n; i++) {
+            printBlank(n, i);
+            triangle[i] = new int[n + 1];
+            for (int j = 0; j <= i; j++) {
+                System.out.printf("%-12d", pascalTriangle1(triangle, i, j));
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        f(8);
 //        System.out.println(pascalTriangle(4, 2));
-        print(10);
+        print1(10);
     }
 }
