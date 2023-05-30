@@ -2,7 +2,17 @@ package com.ghl.datastructure;
 
 public class E01LeetCode206 {
 
-    public static ListNode reverseList(ListNode head) {
+    public static ListNode reverseList1(ListNode head) {
+        return head;
+    }
+
+    public static ListNode reverseList2(ListNode head){
+        if(head!=null){
+
+        }
+
+
+
         return head;
     }
 
@@ -14,7 +24,7 @@ public class E01LeetCode206 {
         ListNode o2 = new ListNode(2, o3);
         ListNode o1 = new ListNode(1, o2);
         System.out.println(o1);
-        ListNode n1 = reverseList(o1);
+        ListNode n1 = reverseList1(o1);
         System.out.println(n1);
 
 
