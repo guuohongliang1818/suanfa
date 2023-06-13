@@ -15,22 +15,41 @@ public class E01LeetCode206 {
     /**
      * 构造一个新链表，从旧链表头部移除节点添加到新链表头部，即可完成新链表即是倒序的
      *
-     * @param o1
+     * @param
      * @return
      */
-    public static ListNode reverseList2(ListNode o1) {
-        ListNode p = o1;
-        ListNode n1 = null;
-        while (p != null) {
-            //不用创建新节点，获取旧链表的
-            //将旧链表的next指针指向
-            p.next = n1;
-            //n1 = p.next;
-            p = p.next;
+    static class List {
+        ListNode head;
+
+        public List(ListNode head) {
+            this.head = head;
         }
 
+        public void addFirst(ListNode first) {
+            first.next = head;
+            head = first;
+        }
 
-        return n1;
+        public ListNode removeFirst() {
+            ListNode first = head;
+            if (first != null) {
+                head = first.next;
+            }
+            return first;
+        }
+    }
+
+    public static ListNode reverseList2(ListNode head) {
+        List list1 = new List(head);
+        List list2 = new List(null);
+        while (true) {
+            ListNode first = list1.removeFirst();
+            if (first == null) {
+                break;
+            }
+            list2.addFirst(first);
+        }
+        return list2.head;
     }
 
 
