@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c389bcf-b04b-4bea-b1c6-8d94243f0b37" name="Changes" comment="删除发送邮件功能">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender/MailUtil.java" afterDir="false" />
+    <list default="true" id="5c389bcf-b04b-4bea-b1c6-8d94243f0b37" name="Changes" comment="链表反转方法2已完成">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ghl/Test01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ghl/datastructure/E01LeetCode206.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ghl/datastructure/E01LeetCode206.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/ghl/EmailSender" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -73,52 +70,13 @@
       <recent name="com.ghl.EmailSender" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MailController">
-    <configuration name="E05InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E05InsertionSort" />
+  <component name="RunManager" selected="JUnit.Test01.test2">
+    <configuration name="E01LeetCode206" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.datastructure.E01LeetCode206" />
       <module name="suanfa" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ghl.algorithm.recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="E06Fibonacci" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E06Fibonacci" />
-      <module name="suanfa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ghl.algorithm.recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="E06Sum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ghl.algorithm.recursion.E06Sum" />
-      <module name="suanfa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ghl.algorithm.recursion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmailSenderUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ghl.EmailSender.EmailSenderUtil" />
-      <module name="suanfa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ghl.EmailSender.*" />
+          <option name="PATTERN" value="com.ghl.datastructure.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,13 +97,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TwoDimensionArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ghl.datastructure.TwoDimensionArray" />
+      <module name="suanfa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ghl.datastructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test01.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="suanfa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ghl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ghl" />
+      <option name="MAIN_CLASS_NAME" value="com.ghl.Test01" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test01.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="suanfa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ghl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ghl" />
+      <option name="MAIN_CLASS_NAME" value="com.ghl.Test01" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Test01.test2" />
+        <item itemvalue="JUnit.Test01.test1" />
+        <item itemvalue="Application.E01LeetCode206" />
         <item itemvalue="Application.MailController" />
-        <item itemvalue="Application.EmailSenderUtil" />
-        <item itemvalue="Application.E06Sum" />
-        <item itemvalue="Application.E06Fibonacci" />
-        <item itemvalue="Application.E05InsertionSort" />
+        <item itemvalue="Application.TwoDimensionArray" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +266,91 @@
       <option name="project" value="LOCAL" />
       <updated>1685082633645</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="发送邮件功能+邮箱密码">
+      <created>1685148761748</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685148761748</updated>
+    </task>
+    <task id="LOCAL-00017" summary="邮箱功能本地测试">
+      <created>1685151663007</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685151663007</updated>
+    </task>
+    <task id="LOCAL-00018" summary="发送邮件功能测试">
+      <created>1685164386982</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685164386982</updated>
+    </task>
+    <task id="LOCAL-00019" summary="尾递归前n个数求和">
+      <created>1685169990874</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1685169990874</updated>
+    </task>
+    <task id="LOCAL-00020" summary="汉诺塔问题时间复杂度为2^n">
+      <created>1685178090935</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1685178090935</updated>
+    </task>
+    <task id="LOCAL-00021" summary="杨辉三角递归实现">
+      <created>1685349407292</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1685349407292</updated>
+    </task>
+    <task id="LOCAL-00022" summary="杨辉三角递归实现">
+      <created>1685349664168</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1685349664168</updated>
+    </task>
+    <task id="LOCAL-00023" summary="杨辉三角代码优化&lt;记忆法，二维数组&gt;">
+      <created>1685434965993</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1685434965993</updated>
+    </task>
+    <task id="LOCAL-00024" summary="链表反转">
+      <created>1685436568065</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1685436568066</updated>
+    </task>
+    <task id="LOCAL-00025" summary="链表反转方法1">
+      <created>1685437187956</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1685437187956</updated>
+    </task>
+    <task id="LOCAL-00026" summary="链表反转方法1已完成">
+      <created>1685607497265</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1685607497265</updated>
+    </task>
+    <task id="LOCAL-00027" summary="链表反转方法2已完成">
+      <created>1686646813874</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1686646813874</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,7 +380,18 @@
     <MESSAGE value="递归求和" />
     <MESSAGE value="发送邮件功能" />
     <MESSAGE value="删除发送邮件功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除发送邮件功能" />
+    <MESSAGE value="发送邮件功能+邮箱密码" />
+    <MESSAGE value="邮箱功能本地测试" />
+    <MESSAGE value="发送邮件功能测试" />
+    <MESSAGE value="尾递归前n个数求和" />
+    <MESSAGE value="汉诺塔问题时间复杂度为2^n" />
+    <MESSAGE value="杨辉三角递归实现" />
+    <MESSAGE value="杨辉三角代码优化&lt;记忆法，二维数组&gt;" />
+    <MESSAGE value="链表反转" />
+    <MESSAGE value="链表反转方法1" />
+    <MESSAGE value="链表反转方法1已完成" />
+    <MESSAGE value="链表反转方法2已完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="链表反转方法2已完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
