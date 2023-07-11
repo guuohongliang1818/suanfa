@@ -1,5 +1,8 @@
 package com.ghl;
 
+import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.ExcelWriter;
+import com.alibaba.excel.write.metadata.WriteSheet;
 import com.ghl.datastructure.SingleLinkedList;
 import org.junit.jupiter.api.Test;
 
@@ -7,6 +10,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
@@ -70,6 +74,22 @@ public class Test01 {
 
         System.out.println(WayWillVO.getS1());
 
+    }
+
+    @Test
+    public void test5(){
+        String fileName="E:/报表.xlsx";
+        ExcelWriter excelWriter = EasyExcel.write(fileName).build();
+        List<Student> studentList=new ArrayList<Student>();
+        Student student=new Student("1","张三","2000-01-01");
+        studentList.add(student);
+        //这里 需要指定写用哪个class去写
+        WriteSheet writeSheet = EasyExcel.writerSheet(0, "学生信息1").head(Student.class).build();
+        excelWriter.write(studentList, writeSheet);
+        writeSheet = EasyExcel.writerSheet(1, "学生信息2").head(Student.class).build();
+        excelWriter.write(studentList, writeSheet);
+        //千万别忘记finish 会帮忙关闭流
+        excelWriter.finish();
     }
 
 }
