@@ -92,4 +92,11 @@ public class Test01 {
         excelWriter.finish();
     }
 
+    @Test
+    public void test6(){
+       Integer i1 = 129;
+       int i2 = 129;
+       System.out.println(i1.equals(i2));
+    }
+
 }
