@@ -38,7 +38,7 @@ su root配置文件的执行顺序：~/.bashrc
 IPTS=(10.0.0.1 10.0.0.2 10.0.0.3)
 显示所有的元素
 echo ${IPTS[@]}
-线束数组元素个数
+显示数组元素个数
 echo $[#IPTS[@]]
 显示数组的第一个元素
 echo ${IPTS[0]}
@@ -139,4 +139,18 @@ done
 a=1
 while [ $a -lt 10 ]; do  echo $a;  a=$(expr $a + 1); done
 until循环和while循环相反，循环测试为假时，执行循环，为真时循环停止
+shift参数左移
+while [ $# -ge 1 ]
+do
+        if [ $1 = "help" ];then
+                echo $1 $1
+        fi
+        # 参数左移
+        shift
+done
 ================================================================
+循环的嵌套，循环中break，continue的使用
+for filename in $(ls /etc/profile.d/*.sh); do   if [ -x $filename ];then   echo "可执行文件";  else   echo "不可以执行";  fi; done
+================================================================
+使用循环处理命令行参数
+$*和$@,代表所有位置参数，$#代表位置参数的数量
