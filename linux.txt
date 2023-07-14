@@ -153,4 +153,100 @@ done
 for filename in $(ls /etc/profile.d/*.sh); do   if [ -x $filename ];then   echo "可执行文件";  else   echo "不可以执行";  fi; done
 ================================================================
 使用循环处理命令行参数
+$0代表脚本的名称
 $*和$@,代表所有位置参数，$#代表位置参数的数量
+
+例子1：
+for pos in $*
+do
+       if [ "$pos" = "help" ];then
+               echo $pos $pos
+       fi
+done
+
+例子2：
+while [ $# -ge 1 ]
+do
+        if [ "$1" = "help" ];then
+                echo $1 $1
+        fi
+        # 参数左移
+        shift
+done
+
+====================================================================
+函数：
+1.自定义函数
+function fname(){
+    //命令
+}
+或，省略function关键字
+fname(){
+    //命令
+}
+2.函数作用范围内的变量：local 变量名
+3.函数的参数：$1,$2,$.......$n
+#!/bin/bash
+#function
+checkpid(){
+        local i
+        for i in $*;
+        do
+                if [ -d "/proc/$i" ];then
+                        return 0
+                fi
+        done
+
+        return 1
+}
+=====================================================================
+系统函数库介绍：
+1.系统自建了函数库，可以在脚本中引用：/etc/init.d/functions
+2.自建函数库，使用source函数脚本文件导入函数
+=====================================================================
+脚本控制
+脚本优先级：避免出现不可控的死循环，死循环导致cpu占用过高，死循环导致死机，（可以使用nice和renice调整脚本优先级）
+    fork炸弹<利用函数不停的创建子进程>：创建子进程，通过ulimit -a 查看max user processes
+    func() {
+        func | func&
+    }
+    或 func() { func | func& };func
+    或 .(){.|.&};.
+捕获信号：信号脚本的捕捉
+    kill 默认会发送15号信号给信用程序
+    ctrl+c发送2号信号给应用程序
+    trap "echo sig 15" 15
+    trap "echo sig 2" 2
+
+    9号信号不可阻塞<是无法使用trap进行补货的>
+=====================================================================
+计划任务
+1.一次性计划任务 at，用ctrl+d提交当前任务，用atq查看当前任务
+2.周期性计划任务(任务叠加问题)，每一个用户都有一个自己的cron
+    配置方式：
+        crontab -e
+    查看现有的计划任务：
+        crontab -l
+    查看任务日志：
+        任务保存：more /var/spool/cron/root
+        任务日志：tail -1000f /var/log/cron
+    配置格式：
+        分钟 小时 日期 月份 星期 执行的命令
+        * * * * 1-5 /usr/bin/date >> /root/shellscript2/date.txt 星期一到星期五运行该脚本
+        * * * * 1,5 /usr/bin/date >> /root/shellscript2/date.txt 星期一,星期五运行该脚本
+        * * * * 5 /usr/bin/date >> /root/shellscript2/date.txt 星期五运行该脚本
+        * * 7 7 1-5 /usr/bin/date >> /root/shellscript2/date.txt 7月7月，这一天如果是星期一到星期五，那么这一天每分钟都运行
+        15 18 7 7 1-5 /usr/bin/date >> /root/shellscript2/date.txt 7月7月，这一天如果是星期一到星期五，那么这一天18:15运行
+        30 3 * * 1 /usr/bin/date >> /root/shellscript2/date.txt 每周一凌晨3点30分运行改脚本
+        0 3 15 * 0 /usr/bin/date >> /root/shellscript2/date.txt 没有15日凌晨3点运行改脚本<注意：凌晨3点，要将分写为0>
+        注意命令的路径问题
+3.计划任务加锁 flock <意外情况：3:30分运行计划任务，但是3:25关机，3:35开机，这样就会导致定时任务无法正常运行>
+如果计算机不能按照预期时间运行
+    anacrontab延时计划任务：
+        延时计划任务存放路径：/etc/cron.d/0hourly
+    flock锁文件
+    flock -xn "/tmp/f.lock" -c "/root/a.sh"
+    /tmp/f.lock 锁文件
+    /root/a.sh 执行的脚本文件
+date命令：显示当前系统的时间<which date>
+
