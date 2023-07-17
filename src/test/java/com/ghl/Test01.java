@@ -4,6 +4,8 @@ import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.write.metadata.WriteSheet;
 import com.ghl.datastructure.SingleLinkedList;
+import org.gavaghan.geodesy.Ellipsoid;
+import org.gavaghan.geodesy.GlobalCoordinates;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -97,6 +99,25 @@ public class Test01 {
        Integer i1 = 129;
        int i2 = 129;
        System.out.println(i1.equals(i2));
+    }
+
+
+    @Test
+    public void test8(){
+        double lon1 = 95.660281;
+        double lat1 = 42.286693;
+        double lon2 = 95.687353;
+        double lat2 = 42.513003;
+
+        GlobalCoordinates source = new GlobalCoordinates(lon1, lat1);
+        GlobalCoordinates target = new GlobalCoordinates(lon2, lat2);
+
+        double meter1 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.Sphere);
+        double meter2 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.WGS84);
+
+        System.out.println("Sphere坐标系计算结果："+meter1 + "米");
+        System.out.println("WGS84坐标系计算结果："+meter2 + "米");
+
     }
 
 }
