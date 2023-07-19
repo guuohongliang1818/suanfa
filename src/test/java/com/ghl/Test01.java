@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.Array;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -60,7 +62,7 @@ public class Test01 {
     }
 
     @Test
-    public void test4(){
+    public void test4() {
         WayWillVO WayWillVO = new WayWillVO();
         List<String> l1 = new ArrayList<>();
         l1.add("1");
@@ -79,11 +81,11 @@ public class Test01 {
     }
 
     @Test
-    public void test5(){
-        String fileName="E:/报表.xlsx";
+    public void test5() {
+        String fileName = "E:/报表.xlsx";
         ExcelWriter excelWriter = EasyExcel.write(fileName).build();
-        List<Student> studentList=new ArrayList<Student>();
-        Student student=new Student("1","张三","2000-01-01");
+        List<Student> studentList = new ArrayList<Student>();
+        Student student = new Student("1", "张三", "2000-01-01");
         studentList.add(student);
         //这里 需要指定写用哪个class去写
         WriteSheet writeSheet = EasyExcel.writerSheet(0, "学生信息1").head(Student.class).build();
@@ -95,19 +97,19 @@ public class Test01 {
     }
 
     @Test
-    public void test6(){
-       Integer i1 = 129;
-       int i2 = 129;
-       System.out.println(i1.equals(i2));
+    public void test6() {
+        Integer i1 = 129;
+        int i2 = 129;
+        System.out.println(i1.equals(i2));
     }
 
 
     @Test
-    public void test8(){
-        double lon1 = 95.660281;
-        double lat1 = 42.286693;
-        double lon2 = 95.687353;
-        double lat2 = 42.513003;
+    public void test8() {
+        double lon1 = 116.3225715637207;
+        double lat1 = 39.909209536859834;
+        double lon2 = 116.415596;
+        double lat2 = 39.901045;
 
         GlobalCoordinates source = new GlobalCoordinates(lon1, lat1);
         GlobalCoordinates target = new GlobalCoordinates(lon2, lat2);
@@ -115,8 +117,46 @@ public class Test01 {
         double meter1 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.Sphere);
         double meter2 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.WGS84);
 
-        System.out.println("Sphere坐标系计算结果："+meter1 + "米");
-        System.out.println("WGS84坐标系计算结果："+meter2 + "米");
+        System.out.println("Sphere坐标系计算结果：" + meter1 + "米");
+        System.out.println("WGS84坐标系计算结果：" + meter2 + "米");
+
+    }
+
+
+    @Test
+    public void test9() {
+        //LocalDateTime now = LocalDateTime.now();
+        LocalDateTime now = LocalDateTime.of(2023, 07, 18, 9, 53, 58);
+        System.out.println("当前时间：" + now);
+        LocalDateTime minusTime_5 = now.minusMinutes(5);
+        System.out.println("当前时间减少5分钟：" + minusTime_5);
+        LocalDateTime minusTime_6 = now.minusMinutes(5 + 1);
+        System.out.println("当前时间减少6分钟：" + minusTime_6);
+        //格式化当前时间
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String to = dtf.format(now.minusMinutes(5));
+        System.out.println("minusTime_5：" + to);
+        String from = dtf.format(now.minusMinutes(5 + 1));
+        System.out.println("minusTime_6：" + from);
+    }
+
+    @Test
+    public void test10() {
+        Vector2D point1 = new Vector2D(39.901045, 116.415596);//out
+        Vector2D cPoint = new Vector2D(39.909209536859834, 116.3225715637207);
+        PointAndSurface.isPointInCircle(cPoint, 8000, point1);
+    }
+
+    @Test
+    public void test11() {
+        List<String> locations = new ArrayList<String>();
+        double lat = 41.993035;
+        double lon = 102.092473;
+        locations.add(new BigDecimal(lon).divide(new BigDecimal(600000), 6, RoundingMode.HALF_UP).setScale(6, RoundingMode.UNNECESSARY) + "," + new BigDecimal(lat).divide(new BigDecimal(600000), 6, RoundingMode.HALF_UP).setScale(6, RoundingMode.UNNECESSARY));
+        System.out.println(locations);
+        String locationStr = locations.stream().map(String::valueOf).collect(Collectors.joining("|"));
+        System.out.println(locationStr);
+
 
     }
 
