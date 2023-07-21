@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.Array;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -130,6 +131,8 @@ public class Test01 {
         System.out.println("当前时间：" + now);
         LocalDateTime minusTime_5 = now.minusMinutes(5);
         System.out.println("当前时间减少5分钟：" + minusTime_5);
+        System.out.println("beginofday"+minusTime_5.with(LocalTime.MIN));
+        System.out.println("endofday"+minusTime_5.with(LocalTime.MAX));
         LocalDateTime minusTime_6 = now.minusMinutes(5 + 1);
         System.out.println("当前时间减少6分钟：" + minusTime_6);
         //格式化当前时间
