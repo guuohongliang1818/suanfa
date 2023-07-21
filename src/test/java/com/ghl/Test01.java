@@ -111,8 +111,8 @@ public class Test01 {
         double lon2 = 116.415596;
         double lat2 = 39.901045;
 
-        GlobalCoordinates source = new GlobalCoordinates(lon1, lat1);
-        GlobalCoordinates target = new GlobalCoordinates(lon2, lat2);
+        GlobalCoordinates source = new GlobalCoordinates(lat1,lon1);
+        GlobalCoordinates target = new GlobalCoordinates(lat2,lon2);
 
         double meter1 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.Sphere);
         double meter2 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.WGS84);
@@ -125,8 +125,8 @@ public class Test01 {
 
     @Test
     public void test9() {
-        //LocalDateTime now = LocalDateTime.now();
-        LocalDateTime now = LocalDateTime.of(2023, 07, 18, 9, 53, 58);
+        LocalDateTime now = LocalDateTime.now();
+        //LocalDateTime now = LocalDateTime.of(2023, 07, 18, 9, 53, 58);
         System.out.println("当前时间：" + now);
         LocalDateTime minusTime_5 = now.minusMinutes(5);
         System.out.println("当前时间减少5分钟：" + minusTime_5);
@@ -138,6 +138,8 @@ public class Test01 {
         System.out.println("minusTime_5：" + to);
         String from = dtf.format(now.minusMinutes(5 + 1));
         System.out.println("minusTime_6：" + from);
+        //当前时间-数据库>=5,才执行后续的更新逻辑
+        //即 当前时间-5>=数据库时间
     }
 
     @Test
