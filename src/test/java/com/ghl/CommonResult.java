@@ -192,6 +192,7 @@ public class CommonResult {
         String msg = "$GNRMC,083735.000,A,2429.53531,N,11810.78036,E,0.54,171.11,190621,,,A*7E";
 
         //GPS gps2 = CommonResult.str_To_Gps84(msg);
+        //GPS gps2 = new GPS(41.85839,97.101761);
         GPS gps2 = new GPS(41.85839,97.101761);
 
         GPS gps = CommonResult.gps84_To_Gcj02(gps2.getLat(), gps2.getLon());
