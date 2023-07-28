@@ -163,7 +163,7 @@ public class Test01 {
         System.out.println(locations);
         String locationStr = locations.stream().map(String::valueOf).collect(Collectors.joining("|"));
         System.out.println(locationStr);
-
+        //测试回滚
 
     }
 
