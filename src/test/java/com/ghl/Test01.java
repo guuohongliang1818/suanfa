@@ -14,7 +14,6 @@ import java.sql.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -114,8 +113,8 @@ public class Test01 {
         double lon2 = 116.415596;
         double lat2 = 39.901045;
 
-        GlobalCoordinates source = new GlobalCoordinates(lat1, lon1);
-        GlobalCoordinates target = new GlobalCoordinates(lat2, lon2);
+        GlobalCoordinates source = new GlobalCoordinates(lat1,lon1);
+        GlobalCoordinates target = new GlobalCoordinates(lat2,lon2);
 
         double meter1 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.Sphere);
         double meter2 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.WGS84);
@@ -133,8 +132,8 @@ public class Test01 {
         System.out.println("当前时间：" + now);
         LocalDateTime minusTime_5 = now.minusMinutes(5);
         System.out.println("当前时间减少5分钟：" + minusTime_5);
-        System.out.println("beginofday" + minusTime_5.with(LocalTime.MIN));
-        System.out.println("endofday" + minusTime_5.with(LocalTime.MAX));
+        System.out.println("beginofday"+minusTime_5.with(LocalTime.MIN));
+        System.out.println("endofday"+minusTime_5.with(LocalTime.MAX));
         LocalDateTime minusTime_6 = now.minusMinutes(5 + 1);
         System.out.println("当前时间减少6分钟：" + minusTime_6);
         //格式化当前时间
@@ -158,37 +157,13 @@ public class Test01 {
     public void test11() {
         List<String> locations = new ArrayList<String>();
         double lat = 41.993035;
-        double lon = 102.092;
-        locations.add(new BigDecimal(lon).setScale(6, BigDecimal.ROUND_UNNECESSARY) + "," + new BigDecimal(lat).setScale(6, BigDecimal.ROUND_UNNECESSARY));
-//        System.out.println(locations);
-//        String locationStr = locations.stream().map(String::valueOf).collect(Collectors.joining("|"));
-//        System.out.println(locationStr);
+        double lon = 102.092473;
+        locations.add(new BigDecimal(lon).divide(new BigDecimal(600000), 6, RoundingMode.HALF_UP).setScale(6, RoundingMode.UNNECESSARY) + "," + new BigDecimal(lat).divide(new BigDecimal(600000), 6, RoundingMode.HALF_UP).setScale(6, RoundingMode.UNNECESSARY));
+        System.out.println(locations);
+        String locationStr = locations.stream().map(String::valueOf).collect(Collectors.joining("|"));
+        System.out.println(locationStr);
 
 
-    }
-
-    @Test
-    public void test12() throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-        Long time_1970 = sdf.parse("1970-01-01 00:00:00").getTime()/1000;
-
-        System.out.println("time_1970：" + time_1970);
-
-        //Long time_1 = (sdf.parse("2023-07-01 23:23:34").getTime() / 1000 - time_1970);
-        //Long time_1 = time_1970;
-                //System.out.println("time_1："+time_1);
-
-
-        //System.out.println("time_1：" + time_1);
-
-        Long time_1 = (sdf.parse("2023-07-01 23:24:34").getTime() / 1000-time_1970);
-
-        System.out.println("time_1：" + time_1);
-
-        Long time_3 = (sdf.parse("2023-07-01 23:25:34").getTime() / 1000 - time_1);
-
-        System.out.println("time_3：" + time_3);
     }
 
 }
