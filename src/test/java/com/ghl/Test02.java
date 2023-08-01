@@ -53,12 +53,14 @@ public class Test02 {
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         // 获取图形上下文对象
         Graphics graphics = image.getGraphics();
+
         // 填充
         graphics.fillRect(0, 0, width, height);
+
         // 设定字体大小及样式
-        graphics.setFont(new Font("宋体", Font.BOLD, 20));
+        graphics.setFont(new Font("黑体", Font.PLAIN, 20));
         // 字体颜色
-        graphics.setColor(Color.BLUE);
+        graphics.setColor(Color.BLACK);
 
         //graphics.dispose();
         //return image;
@@ -96,7 +98,6 @@ public class Test02 {
             // 描绘字符串
             graphics.drawString(strs[i], 250, 450 + (i + 1) * 40);
         }
-
         graphics.dispose();
         //BufferedImage image = createImage(strs);
         File file = new File("e:");
