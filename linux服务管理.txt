@@ -1,0 +1,14 @@
+======================服务管理===================
+1.防火墙概述：
+防火墙的分类：软件防火墙(firewallD,iptables<包过滤防火墙ip,端口,TCP,UDP,ICMP协议>和应用层防护墙<时间段控制>)和硬件防火墙(防御)
+iptables的表和链:
+规则表：filter（过滤功能），nat（网络地址转换），mangle，raw（确定功能）
+规则链：INPUT，OUTPUT，FORWARD（转发），PREROUTING（路有前转换，选择路由后的目的地址），POSTROUTING（路由后转换，控制原地址）
+2.iptables的使用：
+iptables -t filter 命令 规则链 规则 动作(允许还是阻止)
+命令：  -L(list查看规则)
+       -A(add添加规则) -I
+       -D -F -P
+       -N -X -E
+
+添加规则：
