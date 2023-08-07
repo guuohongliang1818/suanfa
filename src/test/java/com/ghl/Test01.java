@@ -18,7 +18,9 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
@@ -164,6 +166,22 @@ public class Test01 {
         System.out.println(locations);
         String locationStr = locations.stream().map(String::valueOf).collect(Collectors.joining("|"));
         System.out.println(locationStr);
+    }
+    @Test
+    public void test12() {
+        Map<String,Object> map = new HashMap<>();
+        map.put("ss","ss");
+        String ss = (String)map.get("zz");
+//        System.out.println(ss);
+        String s = "你好";
+        System.out.println(s);
+        String s1 =  null;
+//        String.valueOf()
+        System.out.println(s1);
+        StringBuilder sb_end = new StringBuilder();
+        sb_end.append(s!=null?s:"")
+                .append(s1);
+        System.out.println(sb_end.toString());
 
 
     }
