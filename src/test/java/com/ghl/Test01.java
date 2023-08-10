@@ -179,7 +179,7 @@ public class Test01 {
 //        String.valueOf()
         System.out.println(s1);
         StringBuilder sb_end = new StringBuilder();
-        sb_end.append(s!=null?s:"")
+        sb_end.append("你好"+"tshia")
                 .append(s1);
         System.out.println(sb_end.toString());
 

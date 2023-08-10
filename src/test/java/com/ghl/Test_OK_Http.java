@@ -6,7 +6,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import okio.BufferedSink;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.junit.jupiter.api.Test;
@@ -69,7 +68,7 @@ public class Test_OK_Http {
 
 //        Request request = new Request.Builder()
 //                .url("http://shop-xo.hctestedu.com/index.php?s=api/cart/save&application=app&application_client_type=weixin&token=eaa0dacd17c4c20802ef8a00f63dceca")
-//                .post(requestBody)
+//                .post(new RequestBody.create(file,MediaType.parse("form-data")))
 //                .build();
 
 //        Response response = client.newCall(request).execute();
