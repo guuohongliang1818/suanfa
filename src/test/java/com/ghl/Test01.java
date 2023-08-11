@@ -21,6 +21,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
@@ -182,8 +185,23 @@ public class Test01 {
         sb_end.append("你好"+"tshia")
                 .append(s1);
         System.out.println(sb_end.toString());
+    }
 
-
+    @Test
+    public void test13(){
+        ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
+        service.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    System.out.println("任务开始");
+                    Thread.sleep(3000);
+                    System.out.println("任务结束");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, 3, 5, TimeUnit.SECONDS);//首次延迟1秒，之后每30秒执行一次
     }
 
 }

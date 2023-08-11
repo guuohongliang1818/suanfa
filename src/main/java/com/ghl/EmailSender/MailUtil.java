@@ -9,6 +9,9 @@ import javax.mail.internet.MimeMessage;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class MailUtil {
     private static final String HOST = MailConfig.host;
@@ -82,5 +85,25 @@ public class MailUtil {
         String fileName = filePath.substring(filePath.lastIndexOf(File.separator));
         messageHelper.addAttachment(fileName, file);
         mailSender.send(mimeMessage);
+    }
+
+    public static void main(String[] args) {
+        //需要加个try{}(Exception e){}将异常捕获，否则异常会导致线程无法继续
+        ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
+        service.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    System.out.println(Thread.currentThread()+":任务开始");
+                    Thread.sleep(3000);
+                    String str = null;
+                    str.equals("");
+                    System.out.println(Thread.currentThread()+":任务结束");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, 3, 5, TimeUnit.SECONDS);//首次延迟1秒，之后每30秒执行一次
     }
 }
