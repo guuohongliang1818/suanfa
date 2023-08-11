@@ -104,6 +104,6 @@ public class MailUtil {
                 }
 
             }
-        }, 3, 5, TimeUnit.SECONDS);//首次延迟1秒，之后每30秒执行一次
+        }, 3, 30000, TimeUnit.SECONDS);//首次延迟1秒，之后每30秒执行一次
     }
 }
