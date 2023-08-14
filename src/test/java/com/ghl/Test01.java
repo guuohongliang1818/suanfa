@@ -3,6 +3,8 @@ package com.ghl;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.write.metadata.WriteSheet;
+import com.alibaba.fastjson.JSON;
+import com.ghl.EmailSender.MailUtil;
 import com.ghl.datastructure.SingleLinkedList;
 import org.gavaghan.geodesy.Ellipsoid;
 import org.gavaghan.geodesy.GlobalCoordinates;
@@ -120,8 +122,8 @@ public class Test01 {
         double lon2 = 116.415596;
         double lat2 = 39.901045;
 
-        GlobalCoordinates source = new GlobalCoordinates(lat1,lon1);
-        GlobalCoordinates target = new GlobalCoordinates(lat2,lon2);
+        GlobalCoordinates source = new GlobalCoordinates(lat1, lon1);
+        GlobalCoordinates target = new GlobalCoordinates(lat2, lon2);
 
         double meter1 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.Sphere);
         double meter2 = GetDistanceMeter.getDistanceMeter(source, target, Ellipsoid.WGS84);
@@ -139,8 +141,8 @@ public class Test01 {
         System.out.println("当前时间：" + now);
         LocalDateTime minusTime_5 = now.minusMinutes(5);
         System.out.println("当前时间减少5分钟：" + minusTime_5);
-        System.out.println("beginofday"+minusTime_5.with(LocalTime.MIN));
-        System.out.println("endofday"+minusTime_5.with(LocalTime.MAX));
+        System.out.println("beginofday" + minusTime_5.with(LocalTime.MIN));
+        System.out.println("endofday" + minusTime_5.with(LocalTime.MAX));
         LocalDateTime minusTime_6 = now.minusMinutes(5 + 1);
         System.out.println("当前时间减少6分钟：" + minusTime_6);
         //格式化当前时间
@@ -170,25 +172,26 @@ public class Test01 {
         String locationStr = locations.stream().map(String::valueOf).collect(Collectors.joining("|"));
         System.out.println(locationStr);
     }
+
     @Test
     public void test12() {
-        Map<String,Object> map = new HashMap<>();
-        map.put("ss","ss");
-        String ss = (String)map.get("zz");
+        Map<String, Object> map = new HashMap<>();
+        map.put("ss", "ss");
+        String ss = (String) map.get("zz");
 //        System.out.println(ss);
         String s = "你好";
         System.out.println(s);
-        String s1 =  null;
+        String s1 = null;
 //        String.valueOf()
         System.out.println(s1);
         StringBuilder sb_end = new StringBuilder();
-        sb_end.append("你好"+"tshia")
+        sb_end.append("你好" + "tshia")
                 .append(s1);
         System.out.println(sb_end.toString());
     }
 
     @Test
-    public void test13(){
+    public void test13() {
         ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
         service.scheduleAtFixedRate(new Runnable() {
             @Override
@@ -202,6 +205,21 @@ public class Test01 {
                 }
             }
         }, 3, 5, TimeUnit.SECONDS);//首次延迟1秒，之后每30秒执行一次
+    }
+
+
+    @Test
+    public void test14() throws Exception {
+        Object object = MailUtil.getMap();
+        System.out.println(object);
+        if (object == null) {
+            throw new Exception("调用五洲运通创建运单接口异常，未返回参数");
+        }
+        Map<String, Object> result = JSON.parseObject(String.valueOf(object));
+        if (result == null || !"0000".equals(result.get("code"))) {
+            throw new Exception(result.get("msg").toString());
+        }
+
     }
 
 }

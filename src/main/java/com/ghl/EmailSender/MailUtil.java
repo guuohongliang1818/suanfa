@@ -1,5 +1,7 @@
 package com.ghl.EmailSender;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.sun.xml.internal.messaging.saaj.packaging.mime.MessagingException;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -8,6 +10,8 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import javax.mail.internet.MimeMessage;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -87,6 +91,13 @@ public class MailUtil {
         mailSender.send(mimeMessage);
     }
 
+    public static Object getMap() {
+        Map<String, String> hashMap = new HashMap<>();
+        hashMap.put("code", "9999");
+        hashMap.put("msg", "XXXXXX");
+        return JSON.toJSONString(hashMap);
+    }
+
     public static void main(String[] args) {
         //需要加个try{}(Exception e){}将异常捕获，否则异常会导致线程无法继续
         ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
@@ -94,11 +105,11 @@ public class MailUtil {
             @Override
             public void run() {
                 try {
-                    System.out.println(Thread.currentThread()+":任务开始");
+                    System.out.println(Thread.currentThread() + ":任务开始");
                     Thread.sleep(3000);
                     String str = null;
                     str.equals("");
-                    System.out.println(Thread.currentThread()+":任务结束");
+                    System.out.println(Thread.currentThread() + ":任务结束");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
