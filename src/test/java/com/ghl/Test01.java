@@ -10,6 +10,7 @@ import org.gavaghan.geodesy.Ellipsoid;
 import org.gavaghan.geodesy.GlobalCoordinates;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.sql.Array;
@@ -226,7 +227,50 @@ public class Test01 {
     public void test15() {
         BigDecimal a = new BigDecimal("10");
         BigDecimal b = new BigDecimal("10");
-        System.out.println(a.longValue() == b.longValue());
+//        System.out.println(a.longValue() == b.longValue());
+
+        Map<String, Integer> map = new HashMap<>();
+        map.put("happy", 1);
+        map.put("apple", 2);
+//        map.forEach((key, value) -> {
+//            System.out.println("key=" + key + ";value=" + value);
+//        });
+//
+//        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+//            System.out.println(entry.getKey());
+//            System.out.println(entry.getValue());
+//        }
+//
+//        for (String key : map.keySet()) {
+//            System.out.println(key);
+//            System.out.println(map.get(key));
+//        }
+//
+//        for (Integer value : map.values()) {
+//            System.out.println(value);
+//        }
+
+        List<String> list = new ArrayList<>();
+        list.add("aaa");
+        list.add("bbb");
+        list.add("ccc");
+        String str = list.stream().map(String::valueOf).collect(Collectors.joining(","));
+        System.out.println(str);
+
+        StringBuffer sb = new StringBuffer();
+        for (String s : list) {
+            sb.append(s).append(",");
+        }
+        System.out.println(sb.toString().substring(0, (sb.toString().length() - 1)));
+        StringBuffer sb1 = new StringBuffer();
+        for (int i = 0; i < list.size(); i++) {
+            if (i < list.size() - 1) {
+                sb1.append(list.get(i)).append(",");
+            } else {
+                sb1.append(list.get(i));
+            }
+        }
+        System.out.println(sb1);
     }
 
 }
