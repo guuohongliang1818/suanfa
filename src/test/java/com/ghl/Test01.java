@@ -224,13 +224,9 @@ public class Test01 {
 
     @Test
     public void test15() {
-        boolean flag = true;
-        for (int i = 0; i < 100; i++) {
-            if (flag) {
-                System.out.println(i);
-                flag = false;
-            }
-        }
+        BigDecimal a = new BigDecimal("10");
+        BigDecimal b = new BigDecimal("10");
+        System.out.println(a.longValue() == b.longValue());
     }
 
 }
